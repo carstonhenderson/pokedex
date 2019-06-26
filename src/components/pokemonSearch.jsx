@@ -8,6 +8,7 @@ const PokemonSearch = ({ value, onChange }) => {
       placeholder="Search Pokémon by name or type"
       value={value}
       onChange={onChange}
+      aria-label="Search Pokémon name/type"
     />
   )
 }
