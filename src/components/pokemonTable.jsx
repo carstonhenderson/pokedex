@@ -31,15 +31,11 @@ const PokemonTable = ({ filter, pokemon }) => {
           <tr>
             <td className="py-4 pl-4">{pokemon.number}</td>
             <td className="text-center py-4">{pokemon.name}</td>
-            <td className="text-center">
-              <div className="text-sm border border-blue-500 rounded">
-                {pokemon.type.join('/')}
-              </div>
-            </td>
+            <td className="text-center">{pokemon.type.join('/')}</td>
             <td className="text-right pr-4">
               <Link
                 to={pokemon.fields.slug}
-                className="border border-blue-500 rounded bg-blue-500 px-4 py-2"
+                className="border border-blue-500 rounded px-4 py-2 hover:bg-blue-500 hover:text-gray-900"
               >
                 View
               </Link>
