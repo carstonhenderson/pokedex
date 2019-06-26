@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Pokedex`,
-    description: `A pokedex featuring all first-generation Pokemon.`,
+    title: `Pokédex`,
+    description: `A Pokédex featuring all first-generation Pokémon.`,
     author: `Carston Henderson`,
   },
   plugins: [
