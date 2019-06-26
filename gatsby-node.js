@@ -31,7 +31,7 @@ exports.createPages = ({ graphql, actions }) => {
     result.data.allPokemon.nodes.forEach(pokemon => {
       createPage({
         path: pokemon.fields.slug,
-        component: path.resolve(`./src/templates/pokemon.jsx`),
+        component: path.resolve('./src/templates/pokemon.jsx'),
         context: {
           slug: pokemon.fields.slug,
         },
