@@ -1,11 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 import FilterablePokemonTable from '../components/filterablePokemonTable'
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <FilterablePokemonTable pokemon={data.allPokemon.nodes}/>
+    <SEO title="Pokédex - All Pokémon" />
+    <FilterablePokemonTable pokemon={data.allPokemon.nodes} />
   </Layout>
 )
 
