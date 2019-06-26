@@ -1,11 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
-import PokemonTable from '../components/pokemonTable'
+import FilterablePokemonTable from '../components/filterablePokemonTable'
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <PokemonTable pokemon={data.allPokemon.nodes}/>
+    <FilterablePokemonTable pokemon={data.allPokemon.nodes}/>
   </Layout>
 )
 

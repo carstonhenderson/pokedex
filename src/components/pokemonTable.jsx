@@ -1,33 +1,54 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-const PokemonTable = ({ pokemon }) => (
-  <table>
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Name</th>
-        <th>Type</th>
-      </tr>
-    </thead>
+const PokemonTable = ({ filter, pokemon }) => {
+  const filteredPokemon = pokemon.filter(pokemon => {
+    const nameMatches = pokemon.name
+      .toLowerCase()
+      .includes(filter.toLowerCase())
 
-    <tbody>
-      {pokemon.map(pokemon => (
-        <tr>
-          <td>{pokemon.number}</td>
-          <td>
-            <Link
-              to={pokemon.fields.slug}
-              className="text-blue-300 hover:underline"
-            >
-              {pokemon.name}
-            </Link>
-          </td>
-          <td>{pokemon.type.join('/')}</td>
+    const typeMatches =
+      pokemon.type.filter(type => {
+        return type.toLowerCase().includes(filter.toLowerCase())
+      }).length > 0
+
+    return nameMatches || typeMatches
+  })
+
+  return (
+    <table className="table-auto w-full">
+      <thead>
+        <tr className="border-b border-gray-500">
+          <th className="text-left p-2">#</th>
+          <th className="p-2">Name</th>
+          <th>Type</th>
+          <th></th>
         </tr>
-      ))}
-    </tbody>
-  </table>
-)
+      </thead>
+
+      <tbody>
+        {filteredPokemon.map(pokemon => (
+          <tr>
+            <td className="py-4 pl-4">{pokemon.number}</td>
+            <td className="text-center py-4">{pokemon.name}</td>
+            <td className="text-center">
+              <div className="text-sm border border-blue-500 rounded">
+                {pokemon.type.join('/')}
+              </div>
+            </td>
+            <td className="text-right pr-4">
+              <Link
+                to={pokemon.fields.slug}
+                className="border border-blue-500 rounded bg-blue-500 px-4 py-2"
+              >
+                View
+              </Link>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  )
+}
 
 export default PokemonTable
