@@ -16,7 +16,7 @@ const PokemonTable = ({ filter, pokemon }) => {
   })
 
   return (
-    <div>
+    <div className="border-t border-gray-700 -mx-4">
       {filteredPokemon.map(pokemon => (
         <PokemonRow pokemon={pokemon} />
       ))}

@@ -6,19 +6,18 @@ import PokemonType from './pokemonType'
 const PokemonRow = ({ pokemon }) => {
   return (
     <Link
-      className="flex justify-between border rounded border-gray-700 shadow mb-4 p-4 hover:bg-gray-800 hover:shadow-lg"
+      className="flex justify-between px-2 py-4 hover:bg-gray-800 border-b border-gray-700"
       to={pokemon.fields.slug}
     >
-      <div className="w-1/3">
+      <div className="flex">
         <Img fixed={pokemon.image.childImageSharp.fixed} alt={pokemon.name} />
+        <h2 className="flex items-center ml-2">
+          <span className="text-sm text-gray-500 mr-2">#{pokemon.number}</span>
+          {pokemon.name}
+        </h2>
       </div>
 
-      <h2 className="w-1/3 flex justify-center items-center">
-        <span className="text-sm text-gray-500 mr-2">#{pokemon.number}</span>
-        {pokemon.name}
-      </h2>
-
-      <div className="flex w-1/3 justify-end items-center -mr-2">
+      <div className="flex justify-end items-center -mr-2">
         {pokemon.type.map(type => (
           <PokemonType type={type} />
         ))}
