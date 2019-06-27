@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import PokemonTable from './PokemonTable'
-import PokemonPagination from './PokemonPagination'
+import PokemonTable from './pokemonTable'
+import PokemonPagination from './pokemonPagination'
 
 const PaginatedPokemonTable = ({ filter, pokemon }) => {
   const [page, setPage] = useState(1)
