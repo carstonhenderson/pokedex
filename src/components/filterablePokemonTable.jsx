@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
-import PokemonSearch from './pokemonSearch'
-import PokemonTable from './pokemonTable'
+import PokemonSearchFilter from './pokemonSearchFilter'
+import PaginatedPokemonTable from './paginatedPokemonTable'
 
 const FilterablePokemonTable = ({ pokemon }) => {
   const [filter, setFilter] = useState('')
 
   return (
     <div>
-      <PokemonSearch value={filter} onChange={e => setFilter(e.target.value)} />
-      <PokemonTable filter={filter} pokemon={pokemon} />
+      <PokemonSearchFilter value={filter} onChange={e => setFilter(e.target.value)} />
+      <PaginatedPokemonTable filter={filter} pokemon={pokemon} />
     </div>
   )
 }

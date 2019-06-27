@@ -6,7 +6,7 @@ import PokemonType from './pokemonType'
 const PokemonRow = ({ pokemon }) => {
   return (
     <Link
-      className="flex justify-between px-2 py-4 hover:bg-gray-800 border-b border-gray-700"
+      className="flex justify-between px-4 py-4 hover:bg-gray-800 border-b border-gray-700"
       to={pokemon.fields.slug}
     >
       <div className="flex">
