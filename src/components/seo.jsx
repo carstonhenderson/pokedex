@@ -66,8 +66,15 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: 'viewport',
-          content: 'initial-scale = 2.3',
-          'user-scalable': 'no',
+          content: 'width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0',
+        },
+        {
+          name: 'apple-mobile-web-app-title',
+          content: 'Pokédex',
+        },
+        {
+          name: 'apple-mobile-web-app-status-bar-style',
+          content: 'black-translucent',
         },
       ].concat(meta)}
     />
