@@ -7,7 +7,7 @@ const PokemonPagination = ({
   end,
   total,
 }) => (
-  <>
+  <div className="mb-4">
     <div className="text-gray-500 text-center mb-4">
       Showing {start} - {end > total ? total : end} of {total} results
     </div>
@@ -33,7 +33,7 @@ const PokemonPagination = ({
         Next
       </button>
     </div>
-  </>
+  </div>
 )
 
 export default PokemonPagination
