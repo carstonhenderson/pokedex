@@ -60,6 +60,15 @@ function SEO({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: 'apple-mobile-web-app-capable',
+          content: 'yes',
+        },
+        {
+          name: 'viewport',
+          content: 'initial-scale = 2.3',
+          'user-scalable': 'no',
+        },
       ].concat(meta)}
     />
   )
