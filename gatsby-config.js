@@ -25,11 +25,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `pokedex`,
-        short_name: `pokedex`,
+        name: `Pokédex`,
+        short_name: `Pokédex`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#1a202c`,
+        theme_color: `#1a202c`,
         display: `standalone`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
