@@ -22,7 +22,7 @@ const PokemonType = ({ type }) => {
   }
 
   return (
-    <div className={`text-center text-sm text-gray-300 px-2 py-1 border rounded border-${colors[type]} border-rounded mr-2`}>{type}</div>
+    <div className={`text-center text-sm text-gray-300 px-2 py-1 border rounded border-${colors[type]} border-rounded`}>{type}</div>
   )
 }
 

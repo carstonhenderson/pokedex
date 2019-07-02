@@ -19,7 +19,9 @@ const PokemonRow = ({ pokemon }) => {
 
       <div className="flex justify-end items-center -mr-2">
         {pokemon.type.map(type => (
-          <PokemonType type={type} />
+          <div className="mr-2">
+            <PokemonType type={type} />
+          </div>
         ))}
       </div>
     </Link>

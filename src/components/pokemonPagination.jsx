@@ -17,7 +17,7 @@ const PokemonPagination = ({
         disabled={start === 1}
         onClick={handlePrevious}
         className={`w-1/3 px-4 py-2 text-center border border-gray-500 rounded ${
-          start === 1 ? 'opacity-50 cursor-not-allowed' : ''
+          start === 1 ? 'opacity-50 cursor-not-allowed' : ' hover:bg-gray-800'
         }`}
       >
         Previous
@@ -27,7 +27,7 @@ const PokemonPagination = ({
         disabled={end >= total}
         onClick={handleNext}
         className={`w-1/3 px-4 py-2 text-center border border-gray-500 rounded ${
-          end >= total ? 'opacity-50 cursor-not-allowed' : ''
+          end >= total ? 'opacity-50 cursor-not-allowed' : 'hover:bg-gray-800'
         }`}
       >
         Next

@@ -6,7 +6,7 @@ import FilterablePokemonTable from '../components/filterablePokemonTable'
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Pokédex - All Pokémon" />
+    <SEO title="All Pokémon" />
     <FilterablePokemonTable pokemon={data.allPokemon.nodes} />
   </Layout>
 )
