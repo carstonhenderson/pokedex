@@ -15,7 +15,7 @@ export default ({ data, location }) => {
       <SEO title={`${pokemon.name}`} />
 
       <AniLink
-        duration={0.3}
+        duration={0.5}
         swipe
         direction="right"
         entryOffset={100}

@@ -6,7 +6,7 @@ import PokemonType from './pokemonType'
 const PokemonRow = ({ pokemon, savedFilter, savedPage }) => {
   return (
     <AniLink
-      duration={0.3}
+      duration={0.5}
       swipe
       direction="left"
       top="enter"
