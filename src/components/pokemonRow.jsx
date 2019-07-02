@@ -1,11 +1,16 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import Img from 'gatsby-image'
 import PokemonType from './pokemonType'
 
 const PokemonRow = ({ pokemon, savedFilter, savedPage }) => {
   return (
-    <Link
+    <AniLink
+      duration={0.3}
+      swipe
+      direction="left"
+      top="enter"
+      entryOffset={100}
       className="flex justify-between px-4 py-4 hover:bg-gray-800 border-b border-gray-700"
       to={pokemon.fields.slug}
       state={{ savedFilter: savedFilter, savedPage: savedPage }}
@@ -25,7 +30,7 @@ const PokemonRow = ({ pokemon, savedFilter, savedPage }) => {
           </div>
         ))}
       </div>
-    </Link>
+    </AniLink>
   )
 }
 

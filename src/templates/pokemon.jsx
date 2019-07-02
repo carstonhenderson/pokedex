@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -13,7 +14,11 @@ export default ({ data, location }) => {
     <Layout>
       <SEO title={`${pokemon.name}`} />
 
-      <Link
+      <AniLink
+        duration={0.3}
+        swipe
+        direction="right"
+        entryOffset={100}
         to="/"
         className="text-blue-300 hover:underline"
         state={{
@@ -22,7 +27,7 @@ export default ({ data, location }) => {
         }}
       >
         Back
-      </Link>
+      </AniLink>
 
       <div className="flex justify-between items-center my-4">
         <h1 className="text-2xl flex items-center">

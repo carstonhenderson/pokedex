@@ -12,6 +12,7 @@ module.exports = {
       },
     },
     `gatsby-source-pokedex`,
+    `gatsby-plugin-transition-link`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
