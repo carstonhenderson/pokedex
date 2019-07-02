@@ -4,6 +4,7 @@ import PokemonPagination from './pokemonPagination'
 
 const PaginatedPokemonTable = ({
   filter,
+  page,
   pokemon,
   start,
   end,
@@ -26,7 +27,12 @@ const PaginatedPokemonTable = ({
   if (filteredPokemon.length > 0) {
     return (
       <>
-        <PokemonTable pokemon={filteredPokemon.slice(start, end)} />
+        <PokemonTable
+          pokemon={filteredPokemon.slice(start, end)}
+          filter={filter}
+          page={page}
+        />
+
         <PokemonPagination
           handlePrevious={handlePrevious}
           handleNext={handleNext}

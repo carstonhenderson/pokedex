@@ -4,10 +4,14 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import FilterablePokemonTable from '../components/filterablePokemonTable'
 
-const IndexPage = ({ data }) => (
+const IndexPage = ({ data, location }) => (
   <Layout>
     <SEO title="All Pokémon" />
-    <FilterablePokemonTable pokemon={data.allPokemon.nodes} />
+    <FilterablePokemonTable
+      pokemon={data.allPokemon.nodes}
+      savedFilter={location.state ? location.state.savedFilter : ''}
+      savedPage={location.state ? location.state.savedPage : 1}
+    />
   </Layout>
 )
 

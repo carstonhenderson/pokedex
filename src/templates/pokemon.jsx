@@ -6,14 +6,21 @@ import SEO from '../components/seo'
 import PokemonType from '../components/pokemonType'
 import PokemonStat from '../components/pokemonStat'
 
-export default ({ data }) => {
+export default ({ data, location }) => {
   const pokemon = data.pokemon
 
   return (
     <Layout>
       <SEO title={`${pokemon.name}`} />
 
-      <Link to="/" className="text-blue-300 hover:underline">
+      <Link
+        to="/"
+        className="text-blue-300 hover:underline"
+        state={{
+          savedFilter: location.state.savedFilter,
+          savedPage: location.state.savedPage,
+        }}
+      >
         Back
       </Link>
 

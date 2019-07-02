@@ -3,11 +3,12 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import PokemonType from './pokemonType'
 
-const PokemonRow = ({ pokemon }) => {
+const PokemonRow = ({ pokemon, savedFilter, savedPage }) => {
   return (
     <Link
       className="flex justify-between px-4 py-4 hover:bg-gray-800 border-b border-gray-700"
       to={pokemon.fields.slug}
+      state={{ savedFilter: savedFilter, savedPage: savedPage }}
     >
       <div className="flex">
         <Img fixed={pokemon.image.childImageSharp.fixed} alt={pokemon.name} />

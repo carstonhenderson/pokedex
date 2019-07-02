@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import PokemonSearchFilter from './pokemonSearchFilter'
 import PaginatedPokemonTable from './paginatedPokemonTable'
 
-const FilterablePokemonTable = ({ pokemon }) => {
-  const [filter, setFilter] = useState('')
-  const [page, setPage] = useState(1)
+const FilterablePokemonTable = ({ pokemon, savedFilter, savedPage }) => {
+  const [filter, setFilter] = useState(savedFilter || '')
+  const [page, setPage] = useState(savedPage || 1)
 
   const start = (page - 1) * 10
   const end = page * 10
@@ -23,6 +23,7 @@ const FilterablePokemonTable = ({ pokemon }) => {
         pokemon={pokemon}
         start={start}
         end={end}
+        page={page}
         handlePrevious={() => setPage(page - 1)}
         handleNext={() => setPage(page + 1)}
       />
