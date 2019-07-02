@@ -21,10 +21,14 @@ export default ({ data, location }) => {
         entryOffset={100}
         to="/"
         className="text-blue-300 hover:underline"
-        state={{
-          savedFilter: location.state.savedFilter,
-          savedPage: location.state.savedPage,
-        }}
+        state={
+          location.state
+            ? {
+                savedFilter: location.state.savedFilter,
+                savedPage: location.state.savedPage,
+              }
+            : undefined
+        }
       >
         Back
       </AniLink>
