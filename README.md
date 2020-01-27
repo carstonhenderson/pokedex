@@ -1,4 +1,4 @@
-# Pokédex
+# Pokédex ![PWA Shields](https://www.pwa-shields.com/1.0.0/series/classic/white/gray.svg)
 
 A Pokédex containing information for all Kanto region Pokémon.
 
