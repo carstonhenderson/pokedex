@@ -16,7 +16,7 @@
     "gatsby-source-filesystem": "^2.0.43",
     "gatsby-source-pokedex": "^1.0.2",
     "gatsby-transformer-sharp": "^2.1.21",
-    "gsap": "^2.1.3",
+    "gsap": "^3.6.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
